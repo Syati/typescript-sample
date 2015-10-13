@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "target": "ES5",
+    "outDir": "app/build",
+    "module": "commonjs",
+    "jsx": "react"
+  },
+  "files": [
+    "typings/tsd.d.ts",
+    "app/app.tsx",
+    "app/components/Comment.tsx",
+    "app/components/CommentBox.tsx",
+    "app/components/CommentForm.tsx",
+    "app/components/CommentList.tsx"
+  ]
+}

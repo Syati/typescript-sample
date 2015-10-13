@@ -1,3 +1,7 @@
+*.js
+*.js.map
+!*.config.js
+
 **/build
 **/typings
 

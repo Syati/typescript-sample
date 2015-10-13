@@ -1,0 +1,23 @@
+{
+  "name": "03_react_tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "tsd install",
+    "start": "webpack && open app/index.html && json-server --watch db.json",
+    "open": "open app/index.html",
+    "build": "webpack",
+    "clean": "find -E . -regex './app/.+\\.(js|map)$' -type f | xargs rm"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "json-server": "^0.8.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "ts-loader": "^0.5.6",
+    "typescript": "^1.6.2"
+  }
+}
