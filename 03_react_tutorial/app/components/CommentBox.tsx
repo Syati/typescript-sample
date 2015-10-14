@@ -11,13 +11,19 @@ class CommentBox extends React.Component<CommentBox.Props, CommentBox.State> {
 
     loadCommentsFromServer = () => {
         let jqxhr = $.get(this.props.url);
-        jqxhr.done((data, status, jqXHR) => {
-            this.setState({data: data})
+        jqxhr.done((data) => this.setState({data: data}));
+        jqxhr.fail((jqXHR, status, err) => console.error(this.props.url, status, err.toString()));
+    };
+
+    handleCommentSubmit = (comment) => {
+        let comments = this.state.data;
+        let jqxhr = $.post(this.props.url, comment);
+        jqxhr.done((commentWithId) => {
+            let newComments = comments.concat([commentWithId]);
+            this.setState({data: newComments});
         });
-        jqxhr.fail((jqXHR, status, err) => {
-            console.error(this.props.url, status, err.toString());
-        });
-    }
+        jqxhr.fail((jqXHR, status, err) => console.error(this.props.url, status, err.toString()));
+    };
 
     componentDidMount() {
         this.loadCommentsFromServer();
@@ -32,7 +38,7 @@ class CommentBox extends React.Component<CommentBox.Props, CommentBox.State> {
             <div className="commnetBox">
                 <h1>Comments</h1>
                 <CommentList data={this.state.data} />
-                <CommentForm />
+                <CommentForm onCommentSubmit={this.handleCommentSubmit}/>
             </div>
         );
     }

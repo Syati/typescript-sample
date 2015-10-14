@@ -13,7 +13,7 @@ class CommentForm extends React.Component<CommentForm.Props, CommentForm.State>{
         if(!text || !author) {
             return;
         }
-        // TODO: send request to server
+        this.props.onCommentSubmit({author: author, text: text});
         authorInputElement.value = '';
         textInputElement.value = '';
         return;
@@ -32,6 +32,7 @@ class CommentForm extends React.Component<CommentForm.Props, CommentForm.State>{
 
 namespace CommentForm {
     export interface Props {
+        onCommentSubmit: (comment:{author: string, text: string}) => void;
     }
 
     export interface State {
