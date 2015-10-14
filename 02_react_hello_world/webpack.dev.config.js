@@ -1,23 +1,30 @@
 var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
-  entry: './app/app.tsx',
+  entry: {
+    app: [
+      'webpack/hot/only-dev-server',
+      './app/app.tsx'
+    ]
+  },
   output: {
     path: path.resolve(__dirname, "build"),
+    publicPath: "/",
     filename: "bundle.js"
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: './app/index.html'
-  })],
   resolve: {
-    // Add `.ts` and `.tsx` as a resolvable extension.
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
   },
   module: {
     loaders: [
-      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
       { test: /\.tsx?$/, loader: 'ts-loader' }
+    ]
+  },
+  devServer: {
+    contentBase: './app',
+    plugins: [
+      new webpack.HotModuleReplacementPlugin()
     ]
   }
 };
