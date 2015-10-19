@@ -10,6 +10,7 @@ class TodoTextInput extends React.Component<TodoTextInput.Props, TodoTextInput.S
         return (
             <input
                 value={this.state.value}
+                placeholder={this.props.placeholder}
             />
         );
     }
@@ -17,6 +18,7 @@ class TodoTextInput extends React.Component<TodoTextInput.Props, TodoTextInput.S
 
 namespace TodoTextInput {
     export interface Props {
+        placeholder?: string
         value?: string
     }
     export interface State {

@@ -6,7 +6,7 @@ class Header extends React.Component<Header.Props, Header.State> {
         return (
             <header id="header">
                 <h1>Todos</h1>
-                <TodoTextInput />
+                <TodoTextInput placeholder="Input a todo"/>
             </header>
         );
     }
