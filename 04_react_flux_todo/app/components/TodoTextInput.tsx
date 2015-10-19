@@ -6,11 +6,18 @@ class TodoTextInput extends React.Component<TodoTextInput.Props, TodoTextInput.S
         this.state = {value: this.props.value || ''};
     }
 
+    handleChange = (event) => {
+        this.setState({
+            value: event.target.value
+        });
+    }
+
     render(){
         return (
             <input
                 value={this.state.value}
                 placeholder={this.props.placeholder}
+                onChange={this.handleChange}
             />
         );
     }
