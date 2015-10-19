@@ -17,6 +17,7 @@
     "app/components/Footer.tsx",
     "app/components/MainSection.tsx",
     "app/components/TodoTextInput.tsx",
-    "app/components/TodoItem.tsx"
+    "app/components/TodoItem.tsx",
+    "app/constants/KeyCode.ts"
   ]
 }
