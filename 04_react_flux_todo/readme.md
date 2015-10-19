@@ -1,4 +1,4 @@
-# 04 React flx todo
+# 04 React flux todo
 
 The code is based on the below url
 - https://github.com/facebook/flux/tree/master/examples/flux-todomvc
