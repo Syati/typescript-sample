@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "target": "ES5",
+    "outDir": "app/build",
+    "module": "commonjs",
+    "jsx": "react"
+  },
+  "filesGlob": [
+    "./**/*.ts"
+  ],
+  "files": [
+    "typings/tsd.d.ts",
+    "app/app.tsx",
+    "app/components/TodoApp.tsx",
+    "app/components/Header.tsx",
+    "app/components/Footer.tsx",
+    "app/components/MainSection.tsx",
+    "app/components/TodoTextInput.tsx",
+    "app/components/TodoItem.tsx"
+  ]
+}

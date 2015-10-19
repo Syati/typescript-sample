@@ -1,0 +1,26 @@
+{
+  "name": "04_react_flux_todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "tsd install && webpack",
+    "clean": "find -E . -regex './app/.+\\.(js|map)$' -type f | xargs rm && rm -rf ./build",
+    "start": "test -e ./abuild/index.html || webpack && webpack-dev-server --progress --colors --hot --inline",
+    "prod": "NODE_ENV=prod webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "flux": "^2.1.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "typescript": "^1.6.2"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^1.6.2",
+    "ts-loader": "^0.5.6",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  }
+}
