@@ -15,7 +15,7 @@ class Comment extends React.Component<Comment.Props, Comment.State>{
 
 namespace Comment {
     export interface Props {
-        key: number
+        key: number;
         author: string;
         children?: React.ReactElement<any>[];
     }
