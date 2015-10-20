@@ -1,5 +1,6 @@
 import * as React from 'react';
-import * as TodoItem from './TodoItem';
+import TodoItem from './TodoItem';
+import TodoStore from '../stores/TodoStore';
 
 class MainSection extends React.Component<MainSection.Props, MainSection.State> {
     render(){
@@ -20,4 +21,4 @@ namespace MainSection {
     }
 }
 
-export = MainSection
+export default MainSection

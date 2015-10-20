@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import * as KEYCODE from '../constants/KeyCode';
+import KEYCODE from '../constants/KeyCode';
 
 class TodoTextInput extends React.Component<TodoTextInput.Props, TodoTextInput.State> {
 
@@ -13,13 +13,13 @@ class TodoTextInput extends React.Component<TodoTextInput.Props, TodoTextInput.S
         if(event.keyCode === KEYCODE.ENTER_KEY_CODE) {
             this.save()
         }
-    }
+    };
 
     handleChange = (event) => {
         this.setState({
             value: event.target.value
         });
-    }
+    };
 
     save(){
         this.props.onSave(this.state.value);
@@ -52,4 +52,4 @@ namespace TodoTextInput {
     }
 }
 
-export = TodoTextInput
+export default TodoTextInput;

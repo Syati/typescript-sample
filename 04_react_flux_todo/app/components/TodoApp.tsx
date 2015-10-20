@@ -1,8 +1,9 @@
 import * as React from 'react';
 
-import * as Header from './Header';
-import * as MainSection from './MainSection';
-import * as Footer from './Footer';
+import Header from './Header';
+import Footer from './Footer';
+import MainSection from './MainSection';
+import TodoStore from '../stores/TodoStore';
 
 class TodoApp extends React.Component<TodoApp.Props, TodoApp.State> {
     render(){
@@ -23,4 +24,4 @@ namespace TodoApp {
     }
 }
 
-export = TodoApp
+export default TodoApp

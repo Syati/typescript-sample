@@ -1,5 +1,6 @@
 import * as React from 'react';
-import * as TodoTextInput from './TodoTextInput';
+import TodoTextInput from './TodoTextInput';
+import TodoStore from '../stores/TodoStore';
 
 class TodoItem extends React.Component<TodoItem.Props, TodoItem.State> {
     handleSave = (text) => {
@@ -25,4 +26,4 @@ namespace TodoItem {
     }
 }
 
-export = TodoItem
+export default TodoItem

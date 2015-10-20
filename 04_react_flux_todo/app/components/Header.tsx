@@ -1,5 +1,7 @@
 import * as React from 'react';
-import * as TodoTextInput from './TodoTextInput'
+
+import TodoTextInput from './TodoTextInput';
+import TodoActions from '../actions/TodoActions';
 
 class Header extends React.Component<Header.Props, Header.State> {
 
@@ -25,4 +27,4 @@ namespace Header {
     }
 }
 
-export = Header
+export default Header
