@@ -5,6 +5,7 @@ import AppDispatcher from '../dispatcher/AppDispatcher';
 import TodoConstants from '../constants/TodoConstants';
 
 namespace TodoStore {
+    const CHANGE_EVENT = 'change';
     export interface Todo {
         id: string;
         complete: boolean;
@@ -15,7 +16,6 @@ namespace TodoStore {
         [id: string]: Todo;
     }
 
-    const CHANGE_EVENT = 'change';
     let todos: Todos = {};
 
     function create(text){

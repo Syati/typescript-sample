@@ -12,16 +12,16 @@
   "files": [
     "typings/tsd.d.ts",
     "app/app.tsx",
-    "app/components/TodoApp.tsx",
-    "app/components/Header.tsx",
-    "app/components/Footer.tsx",
-    "app/components/MainSection.tsx",
-    "app/components/TodoTextInput.tsx",
-    "app/components/TodoItem.tsx",
-    "app/constants/KeyCode.ts",
-    "app/constants/TodoConstants.ts",
-    "app/actions/TodoActions.ts",
-    "app/stores/TodoStore.ts",
-    "app/dispatcher/AppDispatcher.ts"
+    "app/src/components/TodoApp.tsx",
+    "app/src/components/Header.tsx",
+    "app/src/components/Footer.tsx",
+    "app/src/components/MainSection.tsx",
+    "app/src/components/TodoTextInput.tsx",
+    "app/src/components/TodoItem.tsx",
+    "app/src/constants/KeyCode.ts",
+    "app/src/constants/TodoConstants.ts",
+    "app/src/actions/TodoActions.ts",
+    "app/src/stores/TodoStore.ts",
+    "app/src/dispatcher/AppDispatcher.ts"
   ]
 }
