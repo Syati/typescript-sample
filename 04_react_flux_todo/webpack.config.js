@@ -9,6 +9,7 @@ if(process.env.NODE_ENV === 'development') {
   appList.unshift('webpack/hot/only-dev-server');
 }
 
+var currentPath = process.cwd();
 
 module.exports = {
   entry: {
@@ -23,11 +24,17 @@ module.exports = {
     template: './app/index.html'
   })],
   resolve: {
+    root: [
+      path.join(currentPath, 'app/assets/stylesheets')
+    ],
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
   },
   module: {
+
     loaders: [
-      { test: /\.tsx?$/, loader: 'ts-loader' }
+      { test: /\.tsx?$/, loader: 'ts-loader' },
+      { test: /\.less$/, loader: 'style!css!less?strictMath' },
+      { test: /\.css$/, loader: 'style!css' }
     ]
   },
   devServer: {
