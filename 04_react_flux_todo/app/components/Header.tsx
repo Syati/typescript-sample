@@ -21,7 +21,7 @@ class Header extends React.Component<Header.Props, Header.State> {
 }
 
 namespace Header {
-    export interface Props {
+    export interface Props extends React.DOMAttributes {
     }
     export interface State {
     }

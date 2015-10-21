@@ -11,7 +11,7 @@ class Footer extends React.Component<Footer.Props, Footer.State> {
 }
 
 namespace Footer {
-    export interface Props {
+    export interface Props extends React.DOMAttributes {
     }
     export interface State {
     }

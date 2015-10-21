@@ -42,7 +42,7 @@ class TodoTextInput extends React.Component<TodoTextInput.Props, TodoTextInput.S
 
 namespace TodoTextInput {
 
-    export interface Props {
+    export interface Props extends React.DOMAttributes {
         onSave: (text: string) => void
         placeholder?: string
         value?: string

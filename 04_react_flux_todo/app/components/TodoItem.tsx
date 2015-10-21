@@ -20,7 +20,7 @@ class TodoItem extends React.Component<TodoItem.Props, TodoItem.State> {
 }
 
 namespace TodoItem {
-    export interface Props {
+    export interface Props extends React.DOMAttributes {
     }
     export interface State {
     }

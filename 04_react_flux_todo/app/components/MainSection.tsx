@@ -15,7 +15,7 @@ class MainSection extends React.Component<MainSection.Props, MainSection.State> 
 }
 
 namespace MainSection {
-    export interface Props {
+    export interface Props extends React.DOMAttributes {
     }
     export interface State {
     }

@@ -18,7 +18,7 @@ class TodoApp extends React.Component<TodoApp.Props, TodoApp.State> {
 }
 
 namespace TodoApp {
-    export interface Props {
+    export interface Props extends React.DOMAttributes {
     }
     export interface State {
     }
