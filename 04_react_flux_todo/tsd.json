@@ -13,6 +13,15 @@
     },
     "flux/flux.d.ts": {
       "commit": "af5b8275d1f2b92738b93fddabc461fc20c553a1"
+    },
+    "node/node.d.ts": {
+      "commit": "b70895565dd5bd5de71c31e573d781409554bbf1"
+    },
+    "object-assign/object-assign.d.ts": {
+      "commit": "68548c2daab053869f323d475419c693478bbb73"
+    },
+    "classnames/classnames.d.ts": {
+      "commit": "68548c2daab053869f323d475419c693478bbb73"
     }
   }
 }

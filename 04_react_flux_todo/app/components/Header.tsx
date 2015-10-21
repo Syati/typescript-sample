@@ -5,10 +5,11 @@ import TodoActions from '../actions/TodoActions';
 
 class Header extends React.Component<Header.Props, Header.State> {
 
-    handleSave = () => {
-        //TODO
-        console.log("header save is called ")
-    }
+    handleSave = (text) => {
+        if(text.trim()) {
+            TodoActions.create(text);
+        }
+    };
 
     render(){
         return (
