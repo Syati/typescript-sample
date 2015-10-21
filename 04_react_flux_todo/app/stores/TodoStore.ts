@@ -31,6 +31,10 @@ namespace TodoStore {
         todos[id] = assign({}, todos[id], updates);
     }
 
+    function destroy(id) {
+        delete todos[id];
+    }
+
     class Store extends EventEmitter {
         constructor(){
             super();
@@ -54,6 +58,11 @@ namespace TodoStore {
                         update(action.id, {text: text});
                         this.emitChange();
                     }
+                    break;
+
+                case TodoConstants.TODO_DESTROY:
+                    destroy(action.id);
+                    this.emitChange();
                     break;
 
                 default:

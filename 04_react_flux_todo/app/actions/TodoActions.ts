@@ -16,6 +16,13 @@ namespace TodoActions {
             text: text
         })
     }
+
+    export function destory(id) {
+        AppDispatcher.dispatch({
+            actionType: TodoConstants.TODO_DESTROY,
+            id: id
+        });
+    }
 }
 
 export default TodoActions;

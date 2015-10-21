@@ -21,9 +21,8 @@ class TodoItem extends React.Component<TodoItem.Props, TodoItem.State> {
     };
 
     handleDestroyClick = () => {
-        //TODO
-        console.log("destory");
-    }
+        TodoActions.destory(this.props.todo.id);
+    };
 
     render(){
         let todo = this.props.todo;
