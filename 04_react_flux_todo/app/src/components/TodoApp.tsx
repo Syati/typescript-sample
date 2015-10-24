@@ -22,6 +22,10 @@ class TodoApp extends React.Component<TodoApp.Props, TodoApp.State> {
         TodoStore.addChangeListener(this.handleChange);
     }
 
+    componentWillUnmount() {
+        TodoStore.removeChangeListener(this.handleChange);
+    }
+
     handleChange = () => {
         this.setState(this.getTodoState());
     };
