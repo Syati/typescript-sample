@@ -23,6 +23,12 @@ namespace TodoStore_ {
         todos[id] = assign({}, todos[id], updates);
     }
 
+    export function updateAll(updates){
+        for (let id in todos) {
+            update(id, updates);
+        }
+    }
+
     export function destroy(id) {
         delete todos[id];
     }
@@ -64,6 +70,15 @@ class TodoStore extends EventEmitter {
                 this.emitChange();
                 break;
 
+            case TodoConstants.TODO_TOGGLE_COMPLETE_ALL:
+                if (this.areAllComplete()) {
+                    TodoStore_.updateAll({complete: false});
+                } else {
+                    TodoStore_.updateAll({complete: true});
+                }
+                this.emitChange();
+                break;
+
             case TodoConstants.TODO_UNDO_COMLETE:
                 TodoStore_.update(action.id, {complete: false});
                 this.emitChange();
@@ -88,6 +103,15 @@ class TodoStore extends EventEmitter {
 
     removeChangeListener(callback) {
         this.removeListener(CHANGE_EVENT, callback);
+    }
+
+    areAllComplete() {
+        for (let id in TodoStore_.todos) {
+            if (!TodoStore_.todos[id].complete) {
+                return false;
+            }
+        }
+        return true;
     }
 }
 

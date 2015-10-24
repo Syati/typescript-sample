@@ -2,18 +2,26 @@
 
 #header {
   input {
-    padding: 10px 5px;
+    padding-left: 26px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width:100%;
   }
 }
 
 #main {
+  position: relative;
   margin:5px 0;
 }
 
 #footer {
 }
 
+#toggle-all{
+  position: absolute;
+  top: -34px;
+  left: 6px;
+}
 
 #todo-list {
   .completed:not(.editing){
@@ -26,7 +34,9 @@
       display:none;
     }
     input {
-      padding: 10px 5px;
+      padding-left: 26px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       width:100%;
       border: solid 1px @secondaryDividerColor;
     }

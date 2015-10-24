@@ -1,9 +1,15 @@
 import * as React from 'react';
 
+import TodoApp from './TodoApp';
 import TodoItem from './TodoItem';
-import TodoStore from '../stores/TodoStore';
+import TodoActions from '../actions/TodoActions';
 
 class MainSection extends React.Component<MainSection.Props, MainSection.State> {
+
+    handleToggleCompleteAll = () => {
+        TodoActions.toggleCompleteAll();
+    };
+
     render(){
         let allTodos = this.props.allTodos;
 
@@ -18,6 +24,12 @@ class MainSection extends React.Component<MainSection.Props, MainSection.State> 
 
         return (
             <section id="main">
+                <input
+                    id="toggle-all"
+                    type="checkbox"
+                    onChange={this.handleToggleCompleteAll}
+                    checked={this.props.areAllComplete ? 'checked' : ''}
+                />
                 <ul id="todo-list">
                     {todos}
                 </ul>
@@ -27,11 +39,8 @@ class MainSection extends React.Component<MainSection.Props, MainSection.State> 
 }
 
 namespace MainSection {
-    export interface Props extends React.DOMAttributes {
-        allTodos: TodoStore.Todos
-    }
-    export interface State {
-    }
+    export interface Props extends TodoApp.State, React.DOMAttributes {}
+    export interface State {}
 }
 
 export default MainSection

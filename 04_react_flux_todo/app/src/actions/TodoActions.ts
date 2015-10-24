@@ -32,6 +32,12 @@ namespace TodoActions {
         AppDispatcher.dispatch({
             actionType: actionType,
             id: todo.id
+        });
+    }
+
+    export function toggleCompleteAll() {
+        AppDispatcher.dispatch({
+            actionType: TodoConstants.TODO_TOGGLE_COMPLETE_ALL
         })
     }
 }

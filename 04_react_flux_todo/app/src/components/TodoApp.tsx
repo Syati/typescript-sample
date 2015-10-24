@@ -8,7 +8,14 @@ import TodoStore from '../stores/TodoStore';
 class TodoApp extends React.Component<TodoApp.Props, TodoApp.State> {
     constructor(props){
         super(props);
-        this.state = {allTodos: TodoStore.getAll()};
+        this.state = this.getTodoState();
+    }
+
+    getTodoState():TodoApp.State {
+        return {
+            allTodos: TodoStore.getAll(),
+            areAllComplete: TodoStore.areAllComplete()
+        };
     }
 
     componentDidMount() {
@@ -16,16 +23,17 @@ class TodoApp extends React.Component<TodoApp.Props, TodoApp.State> {
     }
 
     handleChange = () => {
-        this.setState({
-            allTodos: TodoStore.getAll()
-        })
+        this.setState(this.getTodoState());
     };
 
     render(){
         return (
             <div>
                 <Header />
-                <MainSection allTodos={this.state.allTodos} />
+                <MainSection
+                    allTodos={this.state.allTodos}
+                    areAllComplete={this.state.areAllComplete}
+                />
                 <Footer />
             </div>
         );
@@ -36,7 +44,8 @@ namespace TodoApp {
     export interface Props extends React.DOMAttributes {
     }
     export interface State {
-        allTodos: TodoStore.Todos
+        allTodos: TodoStore.Todos;
+        areAllComplete: boolean;
     }
 }
 
