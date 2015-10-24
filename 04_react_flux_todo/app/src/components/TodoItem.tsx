@@ -24,6 +24,10 @@ class TodoItem extends React.Component<TodoItem.Props, TodoItem.State> {
         TodoActions.destory(this.props.todo.id);
     };
 
+    handleToggleComplete = () => {
+        TodoActions.toggleComplete(this.props.todo);
+    };
+
     render(){
         let todo = this.props.todo;
         var input;
@@ -49,6 +53,7 @@ class TodoItem extends React.Component<TodoItem.Props, TodoItem.State> {
                         className="toggle"
                         type="checkbox"
                         checked={todo.complete}
+                        onChange={this.handleToggleComplete}
                     />
                     <label onDoubleClick={this.handleDoubleClick}>
                         {todo.text}

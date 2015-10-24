@@ -19,7 +19,7 @@ namespace TodoStore_ {
         };
     }
 
-    export function update(id: string, updates:{text: string}){
+    export function update(id: string, updates:{text?: string, complete?: boolean}){
         todos[id] = assign({}, todos[id], updates);
     }
 
@@ -56,6 +56,16 @@ class TodoStore extends EventEmitter {
 
             case TodoConstants.TODO_DESTROY:
                 TodoStore_.destroy(action.id);
+                this.emitChange();
+                break;
+
+            case TodoConstants.TODO_COMPLETE:
+                TodoStore_.update(action.id, {complete: true});
+                this.emitChange();
+                break;
+
+            case TodoConstants.TODO_UNDO_COMLETE:
+                TodoStore_.update(action.id, {complete: false});
                 this.emitChange();
                 break;
 

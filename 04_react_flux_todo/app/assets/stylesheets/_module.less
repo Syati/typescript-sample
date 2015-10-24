@@ -16,7 +16,11 @@
 
 
 #todo-list {
-
+  .completed:not(.editing){
+    label {
+      text-decoration: line-through;
+    }
+  }
   .editing {
     .view {
       display:none;

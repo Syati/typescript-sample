@@ -23,6 +23,17 @@ namespace TodoActions {
             id: id
         });
     }
+
+    export function toggleComplete(todo) {
+        var actionType = todo.complete ?
+            TodoConstants.TODO_UNDO_COMLETE :
+            TodoConstants.TODO_COMPLETE;
+
+        AppDispatcher.dispatch({
+            actionType: actionType,
+            id: todo.id
+        })
+    }
 }
 
 export default TodoActions;
