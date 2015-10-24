@@ -34,7 +34,9 @@ class TodoApp extends React.Component<TodoApp.Props, TodoApp.State> {
                     allTodos={this.state.allTodos}
                     areAllComplete={this.state.areAllComplete}
                 />
-                <Footer />
+                <Footer
+                    allTodos={this.state.allTodos}
+                />
             </div>
         );
     }

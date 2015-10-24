@@ -17,10 +17,16 @@ namespace TodoActions {
         })
     }
 
-    export function destory(id) {
+    export function destroy(id) {
         AppDispatcher.dispatch({
             actionType: TodoConstants.TODO_DESTROY,
             id: id
+        });
+    }
+
+    export function destroyCompleted() {
+        AppDispatcher.dispatch({
+            actionType: TodoConstants.TODO_DESTROY_COMPLETED,
         });
     }
 
@@ -40,6 +46,7 @@ namespace TodoActions {
             actionType: TodoConstants.TODO_TOGGLE_COMPLETE_ALL
         })
     }
+
 }
 
 export default TodoActions;

@@ -32,6 +32,14 @@ namespace TodoStore_ {
     export function destroy(id) {
         delete todos[id];
     }
+
+    export function destroyCompleted(){
+        for (let id in todos) {
+            if (todos[id].complete) {
+                destroy(id);
+            }
+        }
+    }
 }
 
 
@@ -60,13 +68,18 @@ class TodoStore extends EventEmitter {
                 }
                 break;
 
+            case TodoConstants.TODO_COMPLETE:
+                TodoStore_.update(action.id, {complete: true});
+                this.emitChange();
+                break;
+
             case TodoConstants.TODO_DESTROY:
                 TodoStore_.destroy(action.id);
                 this.emitChange();
                 break;
 
-            case TodoConstants.TODO_COMPLETE:
-                TodoStore_.update(action.id, {complete: true});
+            case TodoConstants.TODO_DESTROY_COMPLETED:
+                TodoStore_.destroyCompleted();
                 this.emitChange();
                 break;
 
