@@ -53,7 +53,10 @@ class TodoItem extends React.Component<TodoItem.Props, TodoItem.State> {
                     <label onDoubleClick={this.handleDoubleClick}>
                         {todo.text}
                     </label>
-                    <button className="destroy" onClick={this.handleDestroyClick} />
+                    <button
+                        className="destroy"
+                        onClick={this.handleDestroyClick}
+                    />
                 </div>
                 {input}
             </li>
