@@ -8,16 +8,16 @@ import TodoStore from '../stores/TodoStore';
 class TodoApp extends React.Component<TodoApp.Props, TodoApp.State> {
     constructor(props){
         super(props);
-        this.state = {allTodos: TodoStore.store.getAll()};
+        this.state = {allTodos: TodoStore.getAll()};
     }
 
     componentDidMount() {
-        TodoStore.store.addChangeListener(this.handleChange);
+        TodoStore.addChangeListener(this.handleChange);
     }
 
     handleChange = () => {
         this.setState({
-            allTodos: TodoStore.store.getAll()
+            allTodos: TodoStore.getAll()
         })
     };
 
