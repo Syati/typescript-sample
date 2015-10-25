@@ -1,0 +1,86 @@
+// module
+
+#header {
+  input {
+    padding-left: 26px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width:100%;
+  }
+}
+
+#main {
+  position: relative;
+  margin:5px 0;
+}
+
+#footer {
+  #clear-completed {
+    float: right;
+  }
+}
+
+#toggle-all{
+  position: absolute;
+  top: -34px;
+  left: 6px;
+}
+
+#todo-list {
+  .completed:not(.editing){
+    label {
+      text-decoration: line-through;
+    }
+  }
+  .editing {
+    .view {
+      display:none;
+    }
+    input {
+      padding-left: 26px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width:100%;
+      border: solid 1px @secondaryDividerColor;
+    }
+  }
+
+  .view {
+    padding: 12px 5px;
+    label {
+      padding: 0 0 0 10px;
+    }
+  }
+
+  li {
+    position: relative;
+    .destroy {
+      display: none;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      right: 10px;
+      border: none;
+      background: none;
+    }
+    .destroy:after {
+      content: '×';
+    }
+  }
+
+  li:hover .destroy{
+    display: block;
+  }
+
+  li:first-child {
+    border: solid 1px @dividerColor;
+  }
+
+  li:not(:first-child) {
+    border-left: solid 1px @dividerColor;
+    border-bottom: solid 1px @dividerColor;
+    border-right: solid 1px @dividerColor;
+    border-collapse: collapse;
+  }
+
+}

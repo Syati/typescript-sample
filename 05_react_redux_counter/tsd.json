@@ -1,0 +1,36 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "react/react.d.ts": {
+      "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
+    },
+    "react-dom/react-dom.d.ts": {
+      "commit": "14ab703f435375194360cdba3abab61afc879c18"
+    },
+    "node/node.d.ts": {
+      "commit": "b70895565dd5bd5de71c31e573d781409554bbf1"
+    },
+    "object-assign/object-assign.d.ts": {
+      "commit": "68548c2daab053869f323d475419c693478bbb73"
+    },
+    "classnames/classnames.d.ts": {
+      "commit": "68548c2daab053869f323d475419c693478bbb73"
+    },
+    "redux/redux.d.ts": {
+      "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
+    },
+    "react-redux/react-redux.d.ts": {
+      "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
+    },
+    "redux-thunk/redux-thunk.d.ts": {
+      "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
+    },
+    "redux-actions/redux-actions.d.ts": {
+      "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
+    }
+  }
+}
