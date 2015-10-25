@@ -1,0 +1,25 @@
+{
+  "name": "02_react_hello_world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "tsd install",
+    "clean": "find -E . -regex './app/.+\\.(js|map)$' -type f | xargs rm && rm -rf ./build",
+    "dev": "webpack-dev-server --progress --colors --hot --inline --config webpack.dev.config.js",
+    "prod": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "typescript": "^1.6.2"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^1.6.2",
+    "ts-loader": "^0.5.6",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  }
+}
