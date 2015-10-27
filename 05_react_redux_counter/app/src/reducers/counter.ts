@@ -1,14 +1,17 @@
-import Redux from 'redux';
-import {increment, decrement} from '../actions/counter';
-
 import { handleActions } from 'redux-actions';
 
-let initialState = {
-    state: 0
-};
+import {INCREMENT_COUNTER, DECREMENT_COUNTER} from '../constants/ActionTypes';
+
+const initialState = 0;
 
 export default handleActions({
-    
+    [INCREMENT_COUNTER]: (state, action) => {
+        return state + 1;
+    },
+
+    [DECREMENT_COUNTER]: (state, action) => {
+        return state - 1;
+    }
 }, initialState);
 
 

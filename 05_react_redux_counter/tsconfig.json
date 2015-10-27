@@ -11,10 +11,13 @@
   ],
   "files": [
     "typings/tsd.d.ts",
-    "app/app.tsx",
+    "app/index.tsx",
+    "app/src/containers/App.ts",
+    "app/src/components/Counter.tsx",
     "app/src/constants/ActionTypes.ts",
     "app/src/actions/counter.ts",
     "app/src/reducers/rootReducer.ts",
-    "app/src/reducers/counter.ts"
+    "app/src/reducers/counter.ts",
+    "app/src/store/configureStore.ts"
   ]
 }

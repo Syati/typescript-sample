@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-var appList = ['./app/app.tsx'];
+var appList = ['./app/index.tsx'];
 
 if(process.env.NODE_ENV === 'development') {
   appList.unshift('webpack/hot/only-dev-server');
