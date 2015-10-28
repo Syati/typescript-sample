@@ -1,0 +1,25 @@
+{
+  "name": "test-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "tsd install",
+    "clean": "find ./app -name \\*.js -o -name \\*.map -type f | xargs rm",
+    "pretest": "tsc",
+    "test": "istanbul cover _mocha -- ./app/test/*.test.js",
+    "posttest": "cd coverage && remap-istanbul -i coverage.json -o html-report -t html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.3",
+    "power-assert": "^1.1.0",
+    "remap-istanbul": "^0.3.1"
+  },
+  "dependencies": {
+    "tsd": "^0.6.5",
+    "typescript": "^1.6.2"
+  }
+}

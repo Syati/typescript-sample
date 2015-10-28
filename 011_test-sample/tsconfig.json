@@ -1,0 +1,17 @@
+{
+  "version": "1.6.2",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
+  "files": [
+    "typings/tsd.d.ts",
+    "app/src/main.ts",
+    "app/test/main.test.ts"
+  ]
+}
