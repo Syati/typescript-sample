@@ -2,13 +2,15 @@
   "compilerOptions": {
     "sourceMap": false,
     "target": "ES5",
-    "outDir": "app/build",
     "module": "commonjs",
-    "jsx": "react"    
+    "jsx": "react",
+    "sourceMap": true
   },
   "files": [
     "typings/tsd.d.ts",
-    "app/component.tsx",
-    "app/app.tsx"
+    "app/src/component.tsx",
+    "app/src/app.tsx",
+    "app/test/component.spec.tsx",
+    "app/test/setup.ts"
   ]
 }
