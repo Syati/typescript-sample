@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "tsd install",
-    "clean": "find ./app -name \\*.js -o -name \\*.map -type f | xargs rm",
+    "clean": "find -E . -regex './app/.+\\.(js|map)$' -type f | xargs rm && rm -rf ./build",
     "pretest": "tsc",
     "test": "istanbul cover _mocha -- ./app/test/*.test.js",
     "posttest": "cd coverage && remap-istanbul -i coverage.json -o html-report -t html"
