@@ -12,7 +12,7 @@
       "commit": "6ba6ac096a0559e07217e3d4fad4a2bbd820134b"
     },
     "node/node.d.ts": {
-      "commit": "b70895565dd5bd5de71c31e573d781409554bbf1"
+      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
     },
     "object-assign/object-assign.d.ts": {
       "commit": "68548c2daab053869f323d475419c693478bbb73"
@@ -33,6 +33,24 @@
       "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
     },
     "redux-logger/redux-logger.d.ts": {
+      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+    },
+    "jsdom/jsdom.d.ts": {
+      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+    },
+    "empower/empower.d.ts": {
+      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+    },
+    "mocha/mocha.d.ts": {
+      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+    },
+    "power-assert/power-assert.d.ts": {
+      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+    },
+    "power-assert-formatter/power-assert-formatter.d.ts": {
       "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
     }
   }

@@ -6,8 +6,11 @@
   "scripts": {
     "postinstall": "tsd install && webpack",
     "clean": "find -E . -regex './app/.+\\.(js|map)$' -type f | xargs rm && rm -rf ./build",
-    "start": "test -e ./abuild/index.html || webpack && webpack-dev-server --progress --colors --hot --inline",
-    "prod": "NODE_ENV=prod webpack"
+    "start": "test -e ./build/index.html || webpack && webpack-dev-server --progress --colors --hot --inline",
+    "prod": "NODE_ENV=prod webpack",
+    "pretest": "tsc",
+    "test": "istanbul cover _mocha -- ./app/test/**/*.spec.js --require ./app/test/setup.js",
+    "posttest": "cd ./docs/coverage && remap-istanbul -i coverage.json -o html-report -t html"
   },
   "author": "",
   "license": "ISC",
@@ -32,7 +35,12 @@
     "webpack": "^1.12.2"
   },
   "devDependencies": {
+    "istanbul": "^0.4.0",
+    "jsdom": "^7.0.2",
+    "mocha": "^2.3.3",
+    "power-assert": "^1.1.0",
     "redux-devtools": "^2.1.5",
+    "remap-istanbul": "^0.3.1",
     "webpack-dev-server": "^1.12.0"
   }
 }

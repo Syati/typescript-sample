@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "sourceMap": false,
+    "sourceMap": true,
     "target": "ES5",
-    "outDir": "app/build",
     "module": "commonjs",
     "jsx": "react"
   },
@@ -18,6 +17,8 @@
     "app/src/actions/counter.ts",
     "app/src/reducers/rootReducer.ts",
     "app/src/reducers/counter.ts",
-    "app/src/store/configureStore.ts"
+    "app/src/store/configureStore.ts",
+    "app/test/setup.ts",
+    "app/test/components/Counter.spec.tsx"
   ]
 }
