@@ -62,9 +62,6 @@
     "mime/mime.d.ts": {
       "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
     },
-    "debug/debug.d.ts": {
-      "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
-    },
     "morgan/morgan.d.ts": {
       "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
     },
