@@ -3,6 +3,7 @@
 *.js.map
 !*.config.js
 
+**/static
 **/coverage
 **/build
 **/typings
