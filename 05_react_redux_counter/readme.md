@@ -3,10 +3,6 @@
 The code is based on the below url
 - https://github.com/rackt/redux/tree/master/examples/counter
 
-- you can start after below lib definition will be fixed in tsd
-  - redux-thunk
-  - redux-logger
-
 ## Getting started
 
 ```sh
