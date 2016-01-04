@@ -1,3 +1,5 @@
+"use strict";
+
 import * as express from 'express';
 import settings from './settings';
 let router = express.Router();

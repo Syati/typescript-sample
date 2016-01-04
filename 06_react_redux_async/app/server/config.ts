@@ -1,3 +1,5 @@
+"use strict";
+
 import * as express from 'express';
 import * as morgan from 'morgan';
 import router from './router';

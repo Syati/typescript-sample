@@ -21,13 +21,13 @@
       "commit": "68548c2daab053869f323d475419c693478bbb73"
     },
     "redux/redux.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "fe563dff3428bac1260d1794e2c2ecf8f097535a"
     },
     "react-redux/react-redux.d.ts": {
       "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
     },
     "redux-thunk/redux-thunk.d.ts": {
-      "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
+      "commit": "fe563dff3428bac1260d1794e2c2ecf8f097535a"
     },
     "redux-actions/redux-actions.d.ts": {
       "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
